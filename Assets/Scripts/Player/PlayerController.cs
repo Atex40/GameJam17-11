@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     public float MaxVelocity = 5f;
     public float MaxSprintVelocity = 8f;
 
+    private Vector3 _lastPoisition;
+
     void Start()
     {
         _myRigidBody = GetComponent<Rigidbody>();
@@ -43,12 +45,10 @@ public class PlayerController : MonoBehaviour
         _velocity += velocity;
         if (velocity != Vector3.zero)
         {
-            Debug.Log("THIS IS NOT NULL");
             _animator.SetBool("IsWalking", true);
         }
         else
         {
-            Debug.Log("THIS IS NULL");
             _animator.SetBool("IsWalking", false);
         }
 
@@ -98,7 +98,10 @@ public class PlayerController : MonoBehaviour
             if (!OnGround)
                 _velocity.y += Gravity * -Time.fixedDeltaTime;
             else
+            {
                 _velocity.y = 0f;
+                _lastPoisition = transform.position;
+            }
         }
         _velocity.z *= Mathf.Exp(_drag * -Time.fixedDeltaTime);
         LookAt(vector);
