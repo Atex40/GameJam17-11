@@ -12,15 +12,14 @@ public class PlayerController : MonoBehaviour
     public float JumpSpeed = 5f;
     public float JumpTime = 0.1f;
     private float _curJumpTime = 0f;
-    private float _jumpStartHeight;
     private bool _isJumping = false;
 
     private Vector3 _velocity = Vector3.zero;
     private Rigidbody _myRigidBody;
     private Collider _collider;
+    private Animator _animator;
 
     private float _distToGround;
-    private float _skinWidth;
 
     public float MaxVelocity = 5f;
     public float MaxSprintVelocity = 8f;
@@ -30,18 +29,29 @@ public class PlayerController : MonoBehaviour
         _myRigidBody = GetComponent<Rigidbody>();
         _drag = BaseDrag;
         _collider = GetComponent<Collider>();
+        _animator = GetComponent<Animator>();
         _distToGround = _collider.bounds.extents.y;
-        _skinWidth = _collider.bounds.extents.z;
     }
 
     private bool OnGround
     {
-        get { return Physics.Raycast(transform.position, -Vector3.up, _distToGround + 0.01f); }
+        get { return Physics.Raycast(transform.position, -Vector3.up, _distToGround + 0.001f); }
     }
 
     public void Move(Vector3 velocity, bool sprint)
     {
         _velocity += velocity;
+        if (velocity != Vector3.zero)
+        {
+            Debug.Log("THIS IS NOT NULL");
+            _animator.SetBool("IsWalking", true);
+        }
+        else
+        {
+            Debug.Log("THIS IS NULL");
+            _animator.SetBool("IsWalking", false);
+        }
+
         if (!sprint)
         {
             _velocity.x = Mathf.Clamp(_velocity.x, -MaxVelocity, MaxVelocity);
@@ -58,7 +68,7 @@ public class PlayerController : MonoBehaviour
     {
         if (OnGround && !_isJumping)
         {
-            _jumpStartHeight = transform.position.y;
+            _animator.SetTrigger("JumpTrigger");
             _isJumping = true;
             _curJumpTime = 0f;
         }

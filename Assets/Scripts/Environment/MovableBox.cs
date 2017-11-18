@@ -60,7 +60,7 @@ public class MovableBox : MonoBehaviour
         if (collision.gameObject.tag == "DetectionGround")
         {
             _renderer.material = OnPressureMaterial;
-            Destroy(ToBeDestroyedObject);
+            ToBeDestroyedObject.SetActive(false);
         }
     }
 
