@@ -1,27 +1,22 @@
 fileFormatVersion: 2
-guid: 6090922ea78ace1408c6fdc9deed4c63
-timeCreated: 1511025780
+guid: 4a72c78e99106334a8e2118958e3d5b7
+timeCreated: 1511042529
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
     100000: Interieur_Labyrinthe
-    100002: Mur_Labyrinthe
-    100004: //RootNode
-    100006: Sol_Labyrinthe
+    100002: //RootNode
+    100004: Sol_Labyrinthe
     400000: Interieur_Labyrinthe
-    400002: Mur_Labyrinthe
-    400004: //RootNode
-    400006: Sol_Labyrinthe
+    400002: //RootNode
+    400004: Sol_Labyrinthe
     2300000: Interieur_Labyrinthe
-    2300002: Mur_Labyrinthe
-    2300004: Sol_Labyrinthe
+    2300002: Sol_Labyrinthe
     3300000: Interieur_Labyrinthe
-    3300002: Mur_Labyrinthe
-    3300004: Sol_Labyrinthe
+    3300002: Sol_Labyrinthe
     4300000: Sol_Labyrinthe
-    4300002: Mur_Labyrinthe
-    4300004: Interieur_Labyrinthe
+    4300002: Interieur_Labyrinthe
     9500000: //RootNode
   materials:
     importMaterials: 1
