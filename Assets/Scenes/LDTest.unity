@@ -539,7 +539,7 @@ GameObject:
   - component: {fileID: 124161729}
   m_Layer: 0
   m_Name: Plane (8)
-  m_TagString: Untagged
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -851,7 +851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShadowTransform: {fileID: 402159157}
-  MaxTimerValue: 180
+  MaxTimerValue: 200
   MaxOffset: 1000
   MovementDirection: 2
   Value: 0
@@ -1016,7 +1016,7 @@ GameObject:
   - component: {fileID: 405309314}
   m_Layer: 0
   m_Name: Plane (2)
-  m_TagString: Untagged
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1081,7 +1081,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 405309313}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.43, y: -1.6385942, z: 34.63}
+  m_LocalPosition: {x: 4.43, y: -1.6385942, z: 34.6}
   m_LocalScale: {x: 0.83935505, y: 0.83935505, z: 0.83935505}
   m_Children: []
   m_Father: {fileID: 1955421828}
@@ -1184,7 +1184,7 @@ GameObject:
   - component: {fileID: 511855513}
   m_Layer: 0
   m_Name: Plane (13)
-  m_TagString: Untagged
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1434,7 +1434,7 @@ GameObject:
   - component: {fileID: 630021023}
   m_Layer: 0
   m_Name: Plane (12)
-  m_TagString: Untagged
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2480,7 +2480,7 @@ GameObject:
   - component: {fileID: 1159353943}
   m_Layer: 0
   m_Name: Plane (37)
-  m_TagString: Untagged
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2492,7 +2492,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1159353941}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.9, y: -1.6385942, z: 32.56}
+  m_LocalPosition: {x: 15.9, y: -1.6385942, z: 32.53}
   m_LocalScale: {x: 0.83936, y: 0.83936, z: 0.83936}
   m_Children: []
   m_Father: {fileID: 1955421828}
@@ -3152,7 +3152,7 @@ GameObject:
   - component: {fileID: 1498143404}
   m_Layer: 0
   m_Name: Plane (5)
-  m_TagString: Untagged
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3553,7 +3553,7 @@ GameObject:
   - component: {fileID: 1793609677}
   m_Layer: 0
   m_Name: Plane (4)
-  m_TagString: Untagged
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3805,7 +3805,7 @@ GameObject:
   - component: {fileID: 1900237126}
   m_Layer: 0
   m_Name: Plane (3)
-  m_TagString: Untagged
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3870,7 +3870,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1900237125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.9, y: -1.6385942, z: 21.3}
+  m_LocalPosition: {x: 15.9, y: -1.6385942, z: 21.269997}
   m_LocalScale: {x: 0.83935505, y: 0.83935505, z: 0.83935505}
   m_Children: []
   m_Father: {fileID: 1955421828}
