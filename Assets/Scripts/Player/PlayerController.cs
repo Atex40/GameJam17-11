@@ -95,11 +95,7 @@ public class PlayerController : MonoBehaviour
         {
             _drag = IceDrag;
         }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.transform.tag == "Ice")
+        else
         {
             _drag = BaseDrag;
         }
