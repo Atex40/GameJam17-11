@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
     {
         _velocity += velocity;
         _velocity = Vector3.ClampMagnitude(_velocity, 5f);
+        _myRigidBody.velocity = _velocity;
     }
 
     public void Jump()
@@ -32,8 +33,8 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate()
     {
         var vector = _myRigidBody.position + _velocity * Time.fixedDeltaTime;
-        Debug.Log(_velocity);
-        _myRigidBody.MovePosition(vector);
+        //Debug.Log(_velocity);
+        //_myRigidBody.MovePosition(vector);
         LookAt(vector);
     }
 }
