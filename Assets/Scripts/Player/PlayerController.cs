@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
 
     private float _drag;
     public float BaseDrag = 5f;
@@ -22,7 +23,8 @@ public class PlayerController : MonoBehaviour {
     public float MaxVelocity = 5f;
     public float MaxSprintVelocity = 8f;
 
-    void Start () {
+    void Start()
+    {
         _myRigidBody = GetComponent<Rigidbody>();
         _drag = BaseDrag;
         _collider = GetComponent<Collider>();
@@ -41,7 +43,8 @@ public class PlayerController : MonoBehaviour {
         {
             _velocity.x = Mathf.Clamp(_velocity.x, -MaxVelocity, MaxVelocity);
             _velocity.z = Mathf.Clamp(_velocity.z, -MaxVelocity, MaxVelocity);
-        } else
+        }
+        else
         {
             _velocity.x = Mathf.Clamp(_velocity.x, -MaxSprintVelocity, MaxSprintVelocity);
             _velocity.z = Mathf.Clamp(_velocity.z, -MaxSprintVelocity, MaxSprintVelocity);
@@ -74,7 +77,8 @@ public class PlayerController : MonoBehaviour {
                 _velocity.y += JumpSpeed * Vector3.up.y;
             else
                 _isJumping = false;
-        } else
+        }
+        else
         {
             if (!OnGround)
                 _velocity.y += Gravity * -Time.fixedDeltaTime;
@@ -90,6 +94,11 @@ public class PlayerController : MonoBehaviour {
         if (collision.transform.tag == "Ice")
         {
             _drag = IceDrag;
+        }
+        else if (collision.transform.tag == "MovableBox")
+        {
+            collision.gameObject.GetComponent<MovableBox>().Move(_myRigidBody.velocity);
+
         }
     }
 

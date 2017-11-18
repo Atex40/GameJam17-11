@@ -9,8 +9,11 @@ public class Player : MonoBehaviour
     public float MoveSpeed = 5;
     public float SprintSpeed = 8;
 
+
     private Camera _viewCamera;
     private PlayerController _controller;
+
+    private Collider _collider;
 
     private void Awake()
     {
@@ -31,8 +34,7 @@ public class Player : MonoBehaviour
         _controller.Move(moveVelocity, sprint);
 
         // Jump
-        bool jumpInput = Input.GetKeyDown(KeyCode.Space);
-        if (jumpInput)
+        if (Input.GetKeyDown(KeyCode.Space))
             _controller.Jump();
 
         // Look input
