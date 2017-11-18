@@ -1,22 +1,15 @@
 fileFormatVersion: 2
-guid: d3566062032f2d34bbe2afeb3f218044
-timeCreated: 1511025785
+guid: f7972444e4aeda644bd57535f371c939
+timeCreated: 1511025774
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: Mur_Salle_Spawn
-    100002: //RootNode
-    100004: Sol_Salle_Spawn
-    400000: Mur_Salle_Spawn
-    400002: //RootNode
-    400004: Sol_Salle_Spawn
-    2300000: Mur_Salle_Spawn
-    2300002: Sol_Salle_Spawn
-    3300000: Mur_Salle_Spawn
-    3300002: Sol_Salle_Spawn
-    4300000: Sol_Salle_Spawn
-    4300002: Mur_Salle_Spawn
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Mur_Fromage
     9500000: //RootNode
   materials:
     importMaterials: 1
