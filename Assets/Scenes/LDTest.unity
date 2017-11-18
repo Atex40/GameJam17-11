@@ -1018,8 +1018,8 @@ GameObject:
   m_Component:
   - component: {fileID: 601219766}
   - component: {fileID: 601219769}
-  - component: {fileID: 601219768}
   - component: {fileID: 601219767}
+  - component: {fileID: 601219768}
   m_Layer: 0
   m_Name: Plane (38)
   m_TagString: DetectionGround
@@ -1035,7 +1035,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 601219765}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.81, y: -0.5, z: -37.009995}
+  m_LocalPosition: {x: -2.81, y: -0.562, z: -37.009995}
   m_LocalScale: {x: 0.018672258, y: 0.52503973, z: 0.13760565}
   m_Children: []
   m_Father: {fileID: 471633784}
@@ -1074,21 +1074,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &601219768
-MeshCollider:
+--- !u!65 &601219768
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 64104925774425776, guid: 24087bb50665de04c9c65782e5a11552,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 601219765}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Size: {x: 10, y: 2.220446e-16, z: 9.999999}
+  m_Center: {x: 0, y: 0.00000011920929, z: 0}
 --- !u!33 &601219769
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2813,8 +2810,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1531609541}
   - component: {fileID: 1531609544}
-  - component: {fileID: 1531609543}
   - component: {fileID: 1531609542}
+  - component: {fileID: 1531609543}
   m_Layer: 0
   m_Name: Plane (38)
   m_TagString: DetectionGround
@@ -2830,7 +2827,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1531609540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.786, y: -0.5, z: -28.897}
+  m_LocalPosition: {x: -1.786, y: -0.562, z: -28.897}
   m_LocalScale: {x: 0.018672258, y: 0.52503973, z: 0.13760565}
   m_Children: []
   m_Father: {fileID: 1330517756}
@@ -2869,21 +2866,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1531609543
-MeshCollider:
+--- !u!65 &1531609543
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 64104925774425776, guid: 24087bb50665de04c9c65782e5a11552,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1531609540}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Size: {x: 10, y: 2.220446e-16, z: 9.999999}
+  m_Center: {x: -0.000030517578, y: 0.00000011920929, z: 0}
 --- !u!33 &1531609544
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3117,8 +3111,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1943523219}
   - component: {fileID: 1943523222}
-  - component: {fileID: 1943523221}
   - component: {fileID: 1943523220}
+  - component: {fileID: 1943523221}
   m_Layer: 0
   m_Name: Plane (38)
   m_TagString: DetectionGround
@@ -3134,7 +3128,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1943523218}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.97, y: -0.5, z: -47.51}
+  m_LocalPosition: {x: 0.97, y: -0.562, z: -47.51}
   m_LocalScale: {x: 0.018672258, y: 0.52503973, z: 0.13760565}
   m_Children: []
   m_Father: {fileID: 189304508}
@@ -3173,21 +3167,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1943523221
-MeshCollider:
+--- !u!65 &1943523221
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 64104925774425776, guid: 24087bb50665de04c9c65782e5a11552,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1943523218}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Size: {x: 10, y: 2.220446e-16, z: 9.999999}
+  m_Center: {x: -0.0000076293945, y: 0.00000011920929, z: 0}
 --- !u!33 &1943523222
 MeshFilter:
   m_ObjectHideFlags: 0
