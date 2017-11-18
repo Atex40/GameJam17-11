@@ -125,3 +125,4 @@ MonoBehaviour:
   Gravity: 22
   OnPressureMaterial: {fileID: 2100000, guid: 24ab796135ea88347b290234343cd51b, type: 2}
   OffPressureMaterial: {fileID: 2100000, guid: 570af9186f961834fa311eefb1393e7f, type: 2}
+  ToBeDestroyedObject: {fileID: 0}
