@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1676621864177242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.164, z: 0}
+  m_LocalPosition: {x: 13.2, y: 15.116906, z: 155}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4547200168953078}
@@ -267,7 +267,7 @@ MonoBehaviour:
   IceDrag: 1
   Gravity: 22
   JumpSpeed: 1
-  JumpHeight: 0.25
+  JumpTime: 0.1
   MaxVelocity: 5
   MaxSprintVelocity: 8
 --- !u!136 &136877120645006870

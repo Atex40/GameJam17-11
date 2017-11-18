@@ -10,7 +10,8 @@ public class PlayerController : MonoBehaviour
     public float Gravity = 9.81f;
 
     public float JumpSpeed = 5f;
-    public float JumpHeight = 2f;
+    public float JumpTime = 0.1f;
+    private float _curJumpTime = 0f;
     private float _jumpStartHeight;
     private bool _isJumping = false;
 
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private Collider _collider;
 
     private float _distToGround;
+    private float _skinWidth;
 
     public float MaxVelocity = 5f;
     public float MaxSprintVelocity = 8f;
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour
         _drag = BaseDrag;
         _collider = GetComponent<Collider>();
         _distToGround = _collider.bounds.extents.y;
+        _skinWidth = _collider.bounds.extents.z;
     }
 
     private bool OnGround
@@ -53,10 +56,11 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        if (OnGround)
+        if (OnGround && !_isJumping)
         {
             _jumpStartHeight = transform.position.y;
             _isJumping = true;
+            _curJumpTime = 0f;
         }
     }
 
@@ -73,7 +77,8 @@ public class PlayerController : MonoBehaviour
         _velocity.x *= Mathf.Exp(_drag * -Time.fixedDeltaTime);
         if (_isJumping)
         {
-            if (transform.position.y < _jumpStartHeight + JumpHeight)
+            _curJumpTime += Time.fixedDeltaTime;
+            if (_curJumpTime < JumpTime)
                 _velocity.y += JumpSpeed * Vector3.up.y;
             else
                 _isJumping = false;
