@@ -21,9 +21,14 @@ public class PlayerController : MonoBehaviour
     private float _distToGround;
 
     public float MaxVelocity = 5f;
+    public float MaxSprintVelocity = 8f;
 
+<<<<<<< HEAD
     void Start()
     {
+=======
+    void Start () {
+>>>>>>> 96f5494b07ecb9059cf20bd9f09ca596baee758d
         _myRigidBody = GetComponent<Rigidbody>();
         _drag = BaseDrag;
         _collider = GetComponent<Collider>();
@@ -35,11 +40,18 @@ public class PlayerController : MonoBehaviour
         get { return Physics.Raycast(transform.position, -Vector3.up, _distToGround + 0.01f); }
     }
 
-    public void Move(Vector3 velocity)
+    public void Move(Vector3 velocity, bool sprint)
     {
         _velocity += velocity;
-        _velocity.x = Mathf.Clamp(_velocity.x, -MaxVelocity, MaxVelocity);
-        _velocity.z = Mathf.Clamp(_velocity.z, -MaxVelocity, MaxVelocity);
+        if (!sprint)
+        {
+            _velocity.x = Mathf.Clamp(_velocity.x, -MaxVelocity, MaxVelocity);
+            _velocity.z = Mathf.Clamp(_velocity.z, -MaxVelocity, MaxVelocity);
+        } else
+        {
+            _velocity.x = Mathf.Clamp(_velocity.x, -MaxSprintVelocity, MaxSprintVelocity);
+            _velocity.z = Mathf.Clamp(_velocity.z, -MaxSprintVelocity, MaxSprintVelocity);
+        }
     }
 
     public void Jump()
