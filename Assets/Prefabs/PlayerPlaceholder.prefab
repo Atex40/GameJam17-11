@@ -20,10 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4547200168953078}
   - component: {fileID: 33908398268294954}
-  - component: {fileID: 135498938091988646}
   - component: {fileID: 23813831202013296}
   m_Layer: 0
-  m_Name: Eye
+  m_Name: Eye Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,10 +58,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4705676213824964}
   - component: {fileID: 33331225421358040}
-  - component: {fileID: 135381728849532626}
   - component: {fileID: 23362677478568972}
   m_Layer: 0
-  m_Name: Eye (1)
+  m_Name: Eye Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,7 +234,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -253,6 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 5
+  SprintSpeed: 8
 --- !u!114 &114303393645149270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,37 +269,14 @@ MonoBehaviour:
   JumpSpeed: 1
   JumpHeight: 0.25
   MaxVelocity: 5
---- !u!135 &135381728849532626
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1920947923843906}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &135498938091988646
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1004478228774804}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  MaxSprintVelocity: 8
 --- !u!136 &136877120645006870
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1676621864177242}
-  m_Material: {fileID: 13400000, guid: 7861775a239e2ec4a88362f653d78ccb, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5

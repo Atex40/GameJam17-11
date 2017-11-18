@@ -10,11 +10,14 @@ public class MovableBox : MonoBehaviour
     private Vector3 _velocity;
     private Collider _collider;
     private float _distToGround;
+    private MeshRenderer _renderer;
     #endregion
 
     #region Public Values
     public float Drag = 100f;
-    public float Gravity = 22f; 
+    public float Gravity = 22f;
+    public Material OnPressureMaterial;
+    public Material OffPressureMaterial;
     #endregion
 
 
@@ -25,6 +28,7 @@ public class MovableBox : MonoBehaviour
         _velocity = Vector3.zero;
         _collider = GetComponent<Collider>();
         _distToGround = _collider.bounds.extents.y;
+        _renderer = GetComponent<MeshRenderer>();
     }
 
     private bool OnGround
@@ -50,12 +54,20 @@ public class MovableBox : MonoBehaviour
         }
     }
 
-
-    public void Move(Vector3 velocity)
+    void OnCollisionEnter(Collision collision)
     {
-        _velocity = velocity;
-        if (_velocity.y > 0)
-            _velocity.y = 0f;
+        if (collision.gameObject.tag == "DetectionGround")
+        {
+            _renderer.material = OnPressureMaterial;
+        }
     }
 
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "DetectionGround")
+        {
+            _renderer.material = OffPressureMaterial;
+
+        }
+    }
 }

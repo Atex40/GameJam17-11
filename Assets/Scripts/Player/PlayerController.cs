@@ -95,11 +95,6 @@ public class PlayerController : MonoBehaviour
         {
             _drag = IceDrag;
         }
-        else if (collision.transform.tag == "MovableBox")
-        {
-            collision.gameObject.GetComponent<MovableBox>().Move(_myRigidBody.velocity);
-
-        }
     }
 
     private void OnCollisionExit(Collision collision)
