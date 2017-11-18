@@ -3,16 +3,24 @@
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour {
 
-    Vector3 velocity;
-    Rigidbody myRigidBody;
+    private Vector3 _velocity;
+    private Rigidbody _myRigidBody;
+
+    public float MaxVelocity = 5f;
 
 	void Start () {
-        myRigidBody = GetComponent<Rigidbody>();
+        _myRigidBody = GetComponent<Rigidbody>();
 	}
 
-    public void Move(Vector3 _velocity)
+    public void Move(Vector3 velocity)
     {
-        velocity = _velocity;
+        _velocity += velocity;
+        _velocity = Vector3.ClampMagnitude(_velocity, 5f);
+    }
+
+    public void Jump()
+    {
+        _myRigidBody.AddForce(new Vector3(0f, 10f, 0f), ForceMode.Impulse);
     }
 
     public void LookAt(Vector3 lookPoint)
@@ -23,6 +31,9 @@ public class PlayerController : MonoBehaviour {
 
     void FixedUpdate()
     {
-        myRigidBody.MovePosition(myRigidBody.position + velocity * Time.fixedDeltaTime);
+        var vector = _myRigidBody.position + _velocity * Time.fixedDeltaTime;
+        Debug.Log(_velocity);
+        _myRigidBody.MovePosition(vector);
+        LookAt(vector);
     }
 }
