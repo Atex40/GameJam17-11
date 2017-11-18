@@ -23,7 +23,8 @@ public class PlayerController : MonoBehaviour
     public float MaxVelocity = 5f;
     public float MaxSprintVelocity = 8f;
 
-    void Start () {
+    void Start()
+    {
         _myRigidBody = GetComponent<Rigidbody>();
         _drag = BaseDrag;
         _collider = GetComponent<Collider>();
@@ -42,7 +43,8 @@ public class PlayerController : MonoBehaviour
         {
             _velocity.x = Mathf.Clamp(_velocity.x, -MaxVelocity, MaxVelocity);
             _velocity.z = Mathf.Clamp(_velocity.z, -MaxVelocity, MaxVelocity);
-        } else
+        }
+        else
         {
             _velocity.x = Mathf.Clamp(_velocity.x, -MaxSprintVelocity, MaxSprintVelocity);
             _velocity.z = Mathf.Clamp(_velocity.z, -MaxSprintVelocity, MaxSprintVelocity);
@@ -55,7 +57,6 @@ public class PlayerController : MonoBehaviour
         {
             _jumpStartHeight = transform.position.y;
             _isJumping = true;
-            _myRigidBody.freezeRotation = false;
         }
     }
 
@@ -70,7 +71,6 @@ public class PlayerController : MonoBehaviour
         var vector = _myRigidBody.position + _velocity * Time.fixedDeltaTime;
         _myRigidBody.velocity = _velocity;
         _velocity.x *= Mathf.Exp(_drag * -Time.fixedDeltaTime);
-
         if (_isJumping)
         {
             if (transform.position.y < _jumpStartHeight + JumpHeight)
