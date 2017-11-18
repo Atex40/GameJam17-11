@@ -291,26 +291,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &726661963 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1222863043667392, guid: 5dc5e7dd8fca54545aabee20823944d6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1650103439}
---- !u!54 &726661964
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 726661963}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 1
 --- !u!1 &802935559
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,24 +495,6 @@ Prefab:
     - target: {fileID: 4751072356250720, guid: 5dc5e7dd8fca54545aabee20823944d6, type: 2}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4751072356250720, guid: 5dc5e7dd8fca54545aabee20823944d6, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1222863043667392, guid: 5dc5e7dd8fca54545aabee20823944d6, type: 2}
-      propertyPath: m_TagString
-      value: Fuck
-      objectReference: {fileID: 0}
-    - target: {fileID: 23783988882292652, guid: 5dc5e7dd8fca54545aabee20823944d6,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 65679595546083832, guid: 5dc5e7dd8fca54545aabee20823944d6,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5dc5e7dd8fca54545aabee20823944d6, type: 2}
