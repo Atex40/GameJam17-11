@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShadowTransform: {fileID: 402159157}
-  MaxTimerValue: 200
+  MaxTimerValue: 240
   MaxOffset: 1000
   MovementDirection: 2
   Value: 0
@@ -336,7 +336,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 601219765}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.64, y: -0.51918477, z: -3.7367456}
+  m_LocalPosition: {x: -3.64, y: -0.51918477, z: -6.57}
   m_LocalScale: {x: 0.018672258, y: 0.52503973, z: 0.13760565}
   m_Children: []
   m_Father: {fileID: 471633784}
@@ -536,7 +536,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4973421378948520, guid: d1328945094417e4cb6c4b1b00d3271b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 27.6
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4973421378948520, guid: d1328945094417e4cb6c4b1b00d3271b, type: 2}
       propertyPath: m_LocalPosition.y
