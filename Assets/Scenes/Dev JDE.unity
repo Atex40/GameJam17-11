@@ -347,9 +347,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShadowTransform: {fileID: 362488990}
+  PlayerTransform: {fileID: 290393792}
   MaxTimerValue: 20
   MaxOffset: 10
-  PlayerTransform: {fileID: 290393792}
   MovementDirection: 2
   Value: 0
 --- !u!23 &362488987
@@ -410,8 +410,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 362488985}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: -10.24}
-  m_LocalScale: {x: -14.5995, y: 8.775016, z: 9.987482}
+  m_LocalPosition: {x: 0, y: 0.72, z: -10.1}
+  m_LocalScale: {x: -14.5995, y: 1.3162503, z: 9.987482}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4

@@ -6,7 +6,6 @@ public class KillingPlane : MonoBehaviour
 {
     #region Public Var
     public Transform ShadowTransform;
-    public Transform PlayerTransform;
     public int MaxTimerValue;
     public float MaxOffset;
     public Direction MovementDirection;
@@ -25,7 +24,7 @@ public class KillingPlane : MonoBehaviour
     {
         Positive,
         Negative
-    }; 
+    };
     #endregion
 
     #region Private Var
@@ -64,7 +63,7 @@ public class KillingPlane : MonoBehaviour
             case DirectionValue.Positive:
                 newPos = ShadowTransform.position + offset;
                 break;
-            case DirectionValue.Negative:   
+            case DirectionValue.Negative:
                 newPos = ShadowTransform.position - offset;
                 break;
         }
@@ -73,7 +72,8 @@ public class KillingPlane : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        this._isActive = false;
+        if (other.tag == "Player")
+            _isActive = false;
     }
 
 
