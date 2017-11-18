@@ -18,6 +18,7 @@ public class MovableBox : MonoBehaviour
     public float Gravity = 22f;
     public Material OnPressureMaterial;
     public Material OffPressureMaterial;
+    public GameObject ToBeDestroyedObject;
     #endregion
 
 
@@ -59,6 +60,7 @@ public class MovableBox : MonoBehaviour
         if (collision.gameObject.tag == "DetectionGround")
         {
             _renderer.material = OnPressureMaterial;
+            Destroy(ToBeDestroyedObject);
         }
     }
 
@@ -67,7 +69,6 @@ public class MovableBox : MonoBehaviour
         if (collision.gameObject.tag == "DetectionGround")
         {
             _renderer.material = OffPressureMaterial;
-
         }
     }
 }
