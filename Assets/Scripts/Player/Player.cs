@@ -36,8 +36,5 @@ public class Player : MonoBehaviour
         // Jump
         if (Input.GetKeyDown(KeyCode.Space))
             _controller.Jump();
-
-        // Look input
-
 	}
 }

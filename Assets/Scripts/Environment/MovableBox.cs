@@ -11,6 +11,8 @@ public class MovableBox : MonoBehaviour
     private Collider _collider;
     private float _distToGround;
     private MeshRenderer _renderer;
+
+    private PlayerController _player;
     #endregion
 
     #region Public Values
@@ -25,6 +27,7 @@ public class MovableBox : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         _rig = gameObject.GetComponent<Rigidbody>();
         _velocity = Vector3.zero;
         _collider = GetComponent<Collider>();
@@ -60,6 +63,7 @@ public class MovableBox : MonoBehaviour
         if (collision.gameObject.tag == "DetectionGround")
         {
             _renderer.material = OnPressureMaterial;
+            _player.RemovePotentialCollision(ToBeDestroyedObject.GetInstanceID());
             ToBeDestroyedObject.SetActive(false);
         }
     }

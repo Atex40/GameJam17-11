@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
@@ -26,6 +27,8 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 _lastPoisition;
 
+    private List<int> collisions;
+
     void Start()
     {
         _myRigidBody = GetComponent<Rigidbody>();
@@ -33,11 +36,15 @@ public class PlayerController : MonoBehaviour
         _collider = GetComponent<Collider>();
         _animator = GetComponent<Animator>();
         _distToGround = _collider.bounds.extents.y;
+        collisions = new List<int>();
     }
 
     private bool OnGround
     {
-        get { return Physics.Raycast(transform.position, -Vector3.up, _distToGround + 0.001f); }
+        get
+        {
+            return collisions.Count > 0;
+        }
     }
 
     public void Move(Vector3 velocity, bool sprint)
@@ -98,10 +105,7 @@ public class PlayerController : MonoBehaviour
             if (!OnGround)
                 _velocity.y += Gravity * -Time.fixedDeltaTime;
             else
-            {
                 _velocity.y = 0f;
-                _lastPoisition = transform.position;
-            }
         }
         _velocity.z *= Mathf.Exp(_drag * -Time.fixedDeltaTime);
         LookAt(vector);
@@ -117,5 +121,29 @@ public class PlayerController : MonoBehaviour
         {
             _drag = BaseDrag;
         }
+
+        if (collision.transform.tag == "Fuck")
+            YouFuckedUp();
+        else
+        {
+            collisions.Add(collision.gameObject.GetInstanceID());
+            _lastPoisition = transform.position;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        collisions.Remove(collision.gameObject.GetInstanceID());
+    }
+
+    public void RemovePotentialCollision(int collision)
+    {
+        collisions.Remove(collision);
+    }
+
+    public void YouFuckedUp()
+    {
+        transform.position = _lastPoisition;
+        Move(new Vector3(0, 0, 0), false);
     }
 }
