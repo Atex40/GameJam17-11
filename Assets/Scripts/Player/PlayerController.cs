@@ -23,12 +23,7 @@ public class PlayerController : MonoBehaviour
     public float MaxVelocity = 5f;
     public float MaxSprintVelocity = 8f;
 
-<<<<<<< HEAD
-    void Start()
-    {
-=======
     void Start () {
->>>>>>> 96f5494b07ecb9059cf20bd9f09ca596baee758d
         _myRigidBody = GetComponent<Rigidbody>();
         _drag = BaseDrag;
         _collider = GetComponent<Collider>();
