@@ -15,7 +15,7 @@ public class CameraFollow : MonoBehaviour
 	void Update () {
         if (!_playerBehaviour.IsDead)
         {
-            _viewCamera.transform.rotation = Quaternion.Euler(75, 0, 0);
+            _viewCamera.transform.rotation = Quaternion.Euler(55, 0, 0);
             _viewCamera.transform.position = new Vector3(_player.position.x, _player.position.y + 15, _player.position.z - 5);
         }
 	}
